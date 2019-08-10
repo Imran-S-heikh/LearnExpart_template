@@ -1,0 +1,68 @@
+.card{
+    &-small{
+        background-color: $color-white;
+        padding: 3rem;
+        width: 100%;
+        box-shadow: 0 1rem 2rem rgba($color-black, .4);
+
+        &__text{
+            font-size: 1.6rem;
+            color: $color-gray-light;
+            font-style: italic;
+        }
+
+        &__h3{
+            color: #4d4d4d;
+            padding-top: 2rem;
+        }
+
+        &__h4{
+            font-size: 1.8rem;
+            color: #808080; 
+        }
+
+        &__paragraph{
+            font-size: 1.6rem;
+                color: #808080; 
+                padding-bottom: 2rem;
+        }
+
+    }
+
+    &-large{
+         border: 1px solid rgba(173, 169, 177, 0.432);  
+
+        &__container{
+            padding: 3rem;
+            text-transform: capitalize;
+            font-size: 1.6rem;
+            color: #b3b3b3;
+        }
+
+        &__icon{
+            padding-bottom: 1rem;
+        }
+
+        &__h6{
+            font-size: 1.8rem;
+            color: #333333;
+            padding-bottom: 4rem;
+        }
+        
+        &__value{
+            float: right;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1414d9;
+        }
+
+        &__p{
+            font-size: 1.6rem;
+            padding-bottom: 2rem;
+        }
+
+        &__img{
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.btn{
+    border: none;
+    text-transform: uppercase;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: all .2s;
+
+    &:hover,
+    &:checked{
+        box-shadow: 0 2rem 3rem rgba($color-black, .3);
+        transform: scale(1.1) translateY(-2px);
+    }
+
+    &:active{
+       transform: scale(1.1) translateY(0); 
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+    }
+
+    &-small{
+        width: 12rem;
+        height: 2.5rem;
+        background: $color-primary-blue;
+        color: $color-white;
+        font-size: 1.2rem;
+    }
+
+    &-medium{
+        width: 15rem;
+        height: 5rem;
+        background: $color-primary-blue;
+        color: $color-white;
+        font-size: 1.4rem;
+    }
+
+    &-large{
+        width: 26rem;
+        height: 7rem;
+        background: $color-primary-blue;
+        color: $color-white;
+        font-size: 1.6rem;
+    }
+    
+}

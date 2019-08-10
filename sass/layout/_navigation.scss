@@ -1,0 +1,38 @@
+.navigation{
+    &__nav{
+        padding: 2rem 0;
+    }
+
+    &__list{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__item{
+        font-family: 'PT Serif', serif;
+        font-weight: bold;
+        padding: 0;
+    }
+
+    &__link{
+        text-decoration: none;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        color: $color-light-blue;
+    }
+
+    &__logo{
+        font-family: 'Pacifico', cursive; 
+        font-size: 3.6rem;
+        text-decoration: none;
+        color: $color-primary-blue;
+    }
+
+    &__search{
+        font-size: 1.8rem;
+        padding-left: 2rem;
+        color: $color-light-blue;
+    }
+}
