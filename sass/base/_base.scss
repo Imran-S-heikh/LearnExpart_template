@@ -1,3 +1,15 @@
+:root{
+  --content_width: 90%;
+  --content_width_small: 80%;
+  --regular_font: 1.6rem;
+  --font_medium: 2rem;
+  --font_large: 2.5rem;
+  --font_ex_large: 3rem;
+  --font_small: 1rem;
+  --font_huge: 4rem;
+  --font_6rem: 6rem;
+  --font_medium_large: 2.25rem;
+}
 *,
 *::after,
 *::before{
@@ -8,10 +20,16 @@
 
 html{
   font-size: 62.5%;
+
+  @media screen and(max-width:600px){
+  font-size: 45%;
+  }
+  
 }
 
 body{
   box-sizing: border-box;
+  
 }
 
 main{

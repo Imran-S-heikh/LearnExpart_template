@@ -1,68 +1,104 @@
-.card{
-    &-small{
-        background-color: $color-white;
-        padding: 3rem;
-        width: 100%;
-        box-shadow: 0 1rem 2rem rgba($color-black, .4);
+.card {
+  &-small {
+    background-color: $color-white;
+    padding: 3rem;
+    width: 100%;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
 
-        &__text{
-            font-size: 1.6rem;
-            color: $color-gray-light;
-            font-style: italic;
-        }
-
-        &__h3{
-            color: #4d4d4d;
-            padding-top: 2rem;
-        }
-
-        &__h4{
-            font-size: 1.8rem;
-            color: #808080; 
-        }
-
-        &__paragraph{
-            font-size: 1.6rem;
-                color: #808080; 
-                padding-bottom: 2rem;
-        }
+    &__text {
+      font-size: 1.6rem;
+      color: $color-gray-deep;
+      font-style: italic;
+      margin-right: 80%;
 
     }
 
-    &-large{
-         border: 1px solid rgba(173, 169, 177, 0.432);  
-
-        &__container{
-            padding: 3rem;
-            text-transform: capitalize;
-            font-size: 1.6rem;
-            color: #b3b3b3;
-        }
-
-        &__icon{
-            padding-bottom: 1rem;
-        }
-
-        &__h6{
-            font-size: 1.8rem;
-            color: #333333;
-            padding-bottom: 4rem;
-        }
-        
-        &__value{
-            float: right;
-            font-size: 2rem;
-            font-weight: bold;
-            color: #1414d9;
-        }
-
-        &__p{
-            font-size: 1.6rem;
-            padding-bottom: 2rem;
-        }
-
-        &__img{
-            width: 100%;
-        }
+    &__h3 {
+      color: #4d4d4d;
+      padding-top: 2rem;
+      font-size: 3rem;
+      padding-bottom: 2rem;
     }
+
+    &__h4 {
+      font-size: 1.8rem;
+      color: #808080;
+    }
+
+    &__paragraph {
+      font-size: 1.6rem;
+      color: #808080;
+      padding-bottom: 2rem;
+      text-transform: capitalize;
+    }
+    .hr-small{
+        margin: 3rem 0;
+    }
+
+    @media screen and(max-width:800px){
+      background-color: $color-white;
+      padding: 1rem;
+      width: 100%;
+  
+      &__text {
+        margin-right: 10%;
+  
+      }
+  
+      &__h3 {
+        color: #4d4d4d;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+  
+      
+  
+      &__paragraph {
+        padding-bottom: 1rem;
+      }
+      .hr-small{
+          margin: 1rem 0;
+      }
+    }
+    @media screen and(max-width:600px){
+      display: none;
+    }
+  }
+
+  &-large {
+    border: 1px solid rgba(173, 169, 177, 0.432);
+
+    &__container {
+      padding: 3rem;
+      text-transform: capitalize;
+      font-size: 1.6rem;
+      color: #b3b3b3;
+    }
+
+    &__icon {
+      padding-bottom: 1rem;
+    }
+
+    &__h6 {
+      font-size: 1.8rem;
+      color: #333333;
+      padding-bottom: 4rem;
+    }
+
+    &__value {
+      float: right;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #1414d9;
+    }
+
+    &__p {
+      font-size: 1.6rem;
+      padding-bottom: 2rem;
+    }
+
+    &__img {
+      width: 100%;
+    }
+  }
 }

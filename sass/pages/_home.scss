@@ -1,41 +1,396 @@
-.section-teaching{
-    background-image: url(../img/first_background.png);
-    height: 100rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom: 15rem;
-    background-position: center;
-}
+.section-teaching {
+  background-image: url(../img/first_background.png);
+  height: 100rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 15rem;
+  background-position: center;
+  position: relative;
+  @media screen and(max-width: 600px) {
+    margin-bottom: 5rem;
+  }
 
-.section-about-lms{
-    padding-bottom: 10rem;
-}
-
-.section-courses{
-    background-image:  linear-gradient( 168deg, #f7f7f7 40%, transparent 30%);
-    // height: 111rem;
-    margin-bottom: 15rem;
-}
-
-.section-achivement{
-     background-image: linear-gradient(174deg, #f7f7f7 57%, transparent 30%);
-
-    
-
-    &__header{
-        font-size: 3rem;
-        width: 114rem;
-        padding: 5rem 0;
-        text-transform: capitalize;
-        margin: 0 auto;
+  .text-container {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    .primary-heading {
+      font-size: var(--font_6rem);
     }
+    .hr-large {
+      width: 20%;
+      // background-color: rebeccapurple;
+      margin: 5rem 0;
+    }
+    .paragraph {
+      font-size: var(--font_huge);
+      // width: 90%;
+      color: #666666;
+      font-style: italic;
+      font-weight: 200;
+    }
+
+    @media screen and(max-width: 600px) {
+      width: 80%;
+      transform: translate(0, 0);
+      top: 40%;
+      left: 10%;
+    }
+    @media screen and(max-width: 400px) {
+      width: 90%;
+      top: 40%;
+      left: 5%;
+      .primary-heading {
+        font-size: 4.5rem;
+      }
+      .paragraph {
+        font-size: 3.5rem;
+      }
+    }
+    
+  }
+  .section-teaching__grid-container {
+    width: var(--content_width_small);
+    position: absolute;
+    left: 50%;
+    bottom: -5rem;
+    transform: translate(-50%, 0);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    column-gap: 3rem;
+    margin: 0 auto;
+
+    @media screen and(max-width: 1000px) {
+      width: 100%;
+      column-gap: 0.5rem;
+    }
+  }
 }
 
-.section-class{
-    background: #f7f7f7;
-    padding-bottom: 5rem;
+.section-about-lms {
+  .about-lms {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media screen and(max-width: 600px) {
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+    }
+    width: var(--content_width_small);
+    column-gap: 4rem;
+    justify-content: center;
+    margin: 0 auto;
+    &--img {
+      // height: 40rem;
+      width: 100%;
+    }
+
+    &__h3 {
+      text-transform: uppercase;
+      margin-bottom: 4rem;
+      font-size: 3rem;
+    }
+
+    &__p {
+      color: #858585;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    @media screen and(max-width: 1000px) {
+      &__h3 {
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+        font-size: 3rem;
+      }
+
+      &__p {
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
 }
 
-.section-news{
-    margin-bottom: 6rem;
+.section-courses {
+  background-image: linear-gradient(172deg, #f7f7f7 44%, transparent 4%);
+  margin-bottom: 15rem;
+  .h3 {
+    font-size: 3rem;
+    padding: 10rem 0 3rem 12rem;
+  }
+  .all-course {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @media screen and(max-width: 1000px) {
+      grid-template-columns: 1fr 1fr;
+      row-gap: 3rem;
+    }
+    @media screen and(max-width: 600px) {
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+    }
+    row-gap: 1rem;
+    column-gap: 1rem;
+    width: var(--content_width_small);
+    margin: 0 auto;
+
+    &__items {
+      background-color: $color-white;
+      height: 30rem;
+      width: 100%;
+      display: grid;
+      place-content: center;
+      border-radius: 0.3rem;
+      box-shadow: 0 0.3rem 0.5rem rgba($color-black, 0.1);
+    }
+
+    &__h5 {
+      font-size: 1.6rem;
+      text-transform: capitalize;
+      padding-top: 0.5rem;
+    }
+  }
+
+  .top-course {
+    width: var(--content_width_small);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @media screen and(max-width: 1000px) {
+      grid-template-columns: 1fr 1fr;
+      row-gap: 3rem;
+    }
+    @media screen and(max-width: 600px) {
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+    }
+    column-gap: 2rem;
+    margin: 0 auto;
+  }
+}
+
+.section-achivement {
+  background-image: linear-gradient(174deg, #f7f7f7 57%, transparent 30%);
+
+  &__header {
+    font-size: 3rem;
+    width: var(--content_width_small);
+    padding: 5rem 0;
+    text-transform: capitalize;
+    margin: 0 auto;
+  }
+
+  .achivements {
+    width: var(--content_width_small);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    @media screen and(max-width: 600px) {
+      grid-template-columns: 1fr 1fr;
+      row-gap: 2rem;
+    }
+
+    .achivement-item {
+      display: flex;
+
+      .achivement__text-container {
+        font-size: 1.6rem;
+        margin-left: 3rem;
+      }
+    }
+
+    &__title {
+      font-size: 1.6rem;
+      line-height: 1.2rem;
+      color: #666666;
+      font-family: "PT Serif";
+      font-weight: 700;
+    }
+
+    &__value {
+      font-size: 3rem;
+      line-height: 3.2rem;
+      color: #333333;
+      font-family: "PT Serif";
+      font-weight: 700;
+      padding-bottom: 1rem;
+    }
+  }
+
+  .achivement-2nd-part {
+    width: var(--content_width_small);
+    margin: 0 auto;
+    .hr-medium {
+      width: 50%;
+      margin: 3rem 0;
+    }
+    &__para {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      color: #666666;
+      font-family: "PT Serif";
+      font-weight: 400;
+      padding-bottom: 3rem;
+    }
+
+    &__img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10rem;
+    }
+  }
+}
+
+.section-class {
+  background: #f7f7f7;
+  padding-bottom: 5rem;
+
+  .class {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media screen and(max-width: 600px) {
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+    }
+    width: var(--content_width_small);
+    margin: 0 auto;
+
+    &__header {
+      padding: 3rem 0;
+      text-transform: capitalize;
+
+      &--welcome-txt {
+        font-size: 1.6rem;
+        line-height: 3rem;
+        color: #696363;
+        font-family: "PT Serif";
+        font-weight: 400;
+      }
+
+      &--live-class {
+        font-size: 24px;
+        letter-spacing: 1px;
+        color: #424242;
+        font-family: "PT Serif";
+        font-weight: bold;
+      }
+    }
+
+    &__para {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      color: #666666;
+      font-family: "PT Serif";
+      font-weight: 400;
+      padding-bottom: 3rem;
+    }
+
+    &__img {
+      .img {
+        padding: 1rem;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.section-galarry {
+  .galarry-grid {
+    display: grid;
+    grid-template-areas:
+      "img-1 img-2 img-3 img-3"
+      "img-4 img-4 img-3 img-3";
+    @media screen and(max-width: 600px) {
+      grid-template-areas:
+        "img-1"
+        "img-2"
+        "img-3"
+        "img-4";
+    }
+    width: 100%;
+    margin: 0 auto;
+    & > * {
+      width: 100%;
+    }
+  }
+  .galarry {
+    &-img-1 {
+      grid-area: img-1;
+    }
+
+    &-img-2 {
+      grid-area: img-2;
+    }
+
+    &-img-3 {
+      grid-area: img-3;
+    }
+
+    &-img-4 {
+      grid-area: img-4;
+    }
+  }
+}
+
+.section-news {
+  margin-bottom: 6rem;
+  margin: 0 auto;
+  width: var(--content_width_small);
+
+  .news {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @media screen and(max-width: 1000px) {
+      grid-template-columns: 1fr 1fr;
+      row-gap: 3rem;
+    }
+    @media screen and(max-width: 600px) {
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+    }
+    column-gap: 2rem;
+
+    &__heading {
+      text-transform: uppercase;
+      padding: 8rem 0 4rem 0;
+      font-size: 3rem;
+      color: #7c7a7a;
+    }
+
+    &-item {
+      border: 1px solid #d8d5d5be;
+      margin-bottom: 3rem;
+    }
+
+    &-img {
+      width: 100%;
+      height: auto;
+    }
+
+    &__text-container {
+      padding: 2rem;
+    }
+
+    &__date {
+      font-size: 1.6rem;
+      color: #9c9b9b;
+      text-transform: capitalize;
+    }
+
+    &__para {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      color: #666666;
+      font-family: "PT Serif";
+      font-weight: 400;
+      padding-bottom: 3rem;
+    }
+
+    &__link {
+      text-decoration: none;
+      font-size: 1.6rem;
+    }
+  }
 }
